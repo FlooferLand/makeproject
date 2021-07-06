@@ -73,4 +73,4 @@ open(
 
 
 # Opening VS Code
-os.system(f"code {working_dir}")
+os.system(f"code \"{working_dir}\"")
