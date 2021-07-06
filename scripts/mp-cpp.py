@@ -56,7 +56,7 @@ os.mkdir(os.path.join(working_dir, "src"))
 # Inserting variables into template files
 template_tasks = template_tasks.replace(
 	"{PROJECT_NAME}",
-	os.path.basename(working_dir)
+	os.path.basename(working_dir).replace(' ', '-')
 )
 
 
