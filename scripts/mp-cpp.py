@@ -20,13 +20,13 @@ template_tasks = """{
 		{
 			"label": "Run",
 			"type": "shell",
-			"command": "./bin/{PROJECT_NAME}.exe"
+			"command": "./\"bin/{PROJECT_NAME}.exe\""
 		},
 		
 		{
 			"label": "Build & Run",
 			"type": "shell",
-			"command": "./bin/{PROJECT_NAME}.exe",
+			"command": "./\"bin/{PROJECT_NAME}.exe\"",
 			"dependsOn": ["Build"]
 		}
 	]
