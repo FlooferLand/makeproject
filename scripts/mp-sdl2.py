@@ -1,5 +1,5 @@
 import os
-EDITOR = "codium"
+EDITOR = "code"  # or codium
 
 # Declaring file contents here since the working directory gets messed up when using open()
 # (I think it has something to do with the Batch script i'm running this script with)
@@ -40,6 +40,7 @@ template_main = """#include <iostream>
 int main(int argc, char* args[])
 {
 	std::cout << "Hello World!" << std::endl;
+	return 0;
 }"""
 
 
