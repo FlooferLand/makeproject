@@ -1,5 +1,5 @@
 import os
-
+EDITOR = "codium"
 
 # Declaring file contents here since the working directory gets messed up when using open()
 # (I think it has something to do with the Batch script i'm running this script with)
@@ -72,5 +72,5 @@ open(
 ).write(template_tasks)
 
 
-# Opening VS Code
-os.system(f"code \"{working_dir}\"")
+# Opening editor
+os.system(f"{EDITOR} \"{working_dir}\"")
