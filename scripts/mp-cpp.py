@@ -11,7 +11,7 @@ template_tasks = """{
 			"type": "shell",
 			"command": "g++",
 			"args": [
-				"src/main.cpp",
+				"src/*.cpp",
 				"-o",
 				"bin/{PROJECT_NAME}.exe"
 			]
@@ -62,7 +62,7 @@ template_tasks = template_tasks.replace(
 
 # Writting template files
 open(
-	os.path.join(working_dir, "src", "main.cpp"),
+	os.path.join(working_dir, "src", "Main.cpp"),
 	'w'
 ).write(template_main)
 
