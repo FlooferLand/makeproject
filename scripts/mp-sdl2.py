@@ -15,6 +15,7 @@ template_tasks = """{
 				"-lmingw32",
 				"-lSDL2main",
 				"-lSDL2",
+				"-lSDL2_image",
 				"-o",
 				"bin/{PROJECT_NAME}.exe"
 			]
