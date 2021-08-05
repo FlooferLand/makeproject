@@ -1,5 +1,5 @@
 import os
-EDITOR = "code"  # or codium
+EDITOR = "codium"
 
 # Declaring file contents here since the working directory gets messed up when using open()
 # (I think it has something to do with the Batch script i'm running this script with)
@@ -11,7 +11,7 @@ template_tasks = """{
 			"type": "shell",
 			"command": "g++",
 			"args": [
-				"src/main.cpp",
+				"src/*.cpp",
 				"-lmingw32",
 				"-lSDL2main",
 				"-lSDL2",
@@ -37,11 +37,12 @@ template_tasks = """{
 }"""
 
 template_main = """#include <iostream>
-#include "SDL2/SDL.h"\n
+#include "SDL2/SDL.h"
+#include "SDL2/SDL_image.h"\n
 int main(int argc, char* args[])
 {
 	std::cout << "Hello World!" << std::endl;
-	return 0;
+    return 0;
 }"""
 
 
@@ -68,7 +69,7 @@ template_tasks = template_tasks.replace(
 
 # Writting template files
 open(
-	os.path.join(working_dir, "src", "main.cpp"),
+	os.path.join(working_dir, "src", "Main.cpp"),
 	'w'
 ).write(template_main)
 
