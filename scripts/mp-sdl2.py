@@ -43,7 +43,9 @@ int main(int argc, char* args[])
 	return 0;
 }"""
 
-template_defines = """#include <iostream>
+template_defines = """#pragma once
+
+#include <iostream>
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_image.h"
 
