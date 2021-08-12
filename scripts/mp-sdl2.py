@@ -47,7 +47,7 @@ template_defines = """#include <iostream>
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_image.h"
 
-#define LOG(x)    std::cout << x std::endl
+#define LOG(x)    std::cout << x << std::endl
 #define LOGERR()  LOG(SDL_GetError())"""
 
 
