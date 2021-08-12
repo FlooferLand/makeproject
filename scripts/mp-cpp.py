@@ -32,7 +32,8 @@ template_tasks = """{
 	]
 }"""
 
-template_main = """#include <iostream>\n
+template_main = """#include <iostream>
+
 int main()
 {
 	std::cout << "Hello World!" << std::endl;
@@ -60,12 +61,13 @@ template_tasks = template_tasks.replace(
 )
 
 
-# Writting template files
+# Writting code template files
 open(
 	os.path.join(working_dir, "src", "Main.cpp"),
 	'w'
 ).write(template_main)
 
+# Writting tasks file
 open(
 	os.path.join(working_dir, ".vscode", "tasks.json"),
 	'w'

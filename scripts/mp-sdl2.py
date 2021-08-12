@@ -36,14 +36,19 @@ template_tasks = """{
 	]
 }"""
 
-template_main = """#include <iostream>
-#include "SDL2/SDL.h"
-#include "SDL2/SDL_image.h"\n
+template_main = """#include "Defines.hpp"
+
 int main(int argc, char* args[])
 {
-	std::cout << "Hello World!" << std::endl;
-    return 0;
+	return 0;
 }"""
+
+template_defines = """#include <iostream>
+#include "SDL2/SDL.h"
+#include "SDL2/SDL_image.h"
+
+#define LOG(x)    std::cout << x std::endl
+#define LOGERR()  LOG(SDL_GetError())"""
 
 
 # Variables
@@ -67,12 +72,18 @@ template_tasks = template_tasks.replace(
 )
 
 
-# Writting template files
+# Writting code template files
 open(
 	os.path.join(working_dir, "src", "Main.cpp"),
 	'w'
 ).write(template_main)
 
+open(
+	os.path.join(working_dir, "src", "Defines.hpp"),
+	'w'
+).write(template_defines)
+
+# Writting tasks file
 open(
 	os.path.join(working_dir, ".vscode", "tasks.json"),
 	'w'
